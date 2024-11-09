@@ -25,3 +25,44 @@ FRIENDS[FRIENDS.length] = "Harish Kumar";
 console.log("ARRAY's Elements", FRIENDS);
 
 /** Array's Methods */
+
+/** Iterating using forEach */
+FRIENDS.forEach(function (element){
+    console.log("Element = ",element);
+});
+
+// Methods of the Array
+/** Push the element (add new element at last) */
+FRIENDS.push("X");
+FRIENDS.push("Y");
+let newLength = FRIENDS.push("Z");
+console.log("FRIENDS = ", FRIENDS);
+console.log("NEW LENGHT = ", newLength);
+
+/** Unshift Method add element at first index */
+newLength = FRIENDS.unshift("Purshtom");
+console.log("FRIENDS = ", FRIENDS);
+console.log("NEW LENGHT = ", newLength);
+
+/** pop method removes the last elements */
+let removedElement = FRIENDS.pop();
+console.log("FRIENDS = ", FRIENDS);
+console.log("REMOVED ELEMENT = ", removedElement);
+
+/** shift remove the first element from array */
+removedElement = FRIENDS.shift();
+console.log("FRIENDS = ", FRIENDS);
+console.log("REMOVED ELEMENT = ", removedElement);
+
+/** Get the index of element */
+let elemIdx = FRIENDS.indexOf("Prem");
+console.log("INDEX OF ELEMENT = ", elemIdx);
+
+/** includes checks that the elements existes or not */
+let isIncluded = FRIENDS.includes("Naresh");
+console.log("INCLUDES Naresh = ", isIncluded);
+isIncluded = FRIENDS.includes("Sonu");
+console.log("INCLUDES Sonu = ", isIncluded);
+isIncluded = FRIENDS.includes("Sreenivas");
+console.log("INCLUDES Sreenivas = ", isIncluded);
+
