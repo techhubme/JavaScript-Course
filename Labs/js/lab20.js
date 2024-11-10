@@ -54,3 +54,33 @@ for(let i=0; i< MY_ARRAY.length; i++){
     }
     console.log(MY_ARRAY[i]);
 }
+
+/** Iterating the loop in backward direction */
+console.log("-------- Iterating the loop in backward direction ---------");
+
+for(let i = MY_ARRAY.length-1; i >= 0; i--){
+    console.log("Iteration Number =", i,"| Value =", MY_ARRAY[i]);
+}
+
+/**
+Practice for loop inside loop , Print the following pattern
+
+*
+**
+***
+****
+*****
+******
+*******
+
+*/
+console.log("-------- Practice for loop inside loop Printing pattern ---------");
+let pattern = "";
+for(let i = 0; i < 7; i++){
+ 
+    for(let j = 0; j <= i; j++){
+        pattern = pattern+"*";
+    }
+    pattern = pattern+"\n";
+}
+console.log(pattern);
