@@ -23,3 +23,11 @@ while(dice!=6){
 }
 console.log(`Got the required dice value ${dice}`);
 
+/** Example of do while loop */
+console.log("*******  Example to show the real use case of while loop *******");
+
+let x = 11
+do{
+    console.log("X = ", x);
+    x++;
+}while(x < 10);
