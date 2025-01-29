@@ -81,15 +81,19 @@ const RESTAURANT = {
 };
 
 /** CASE 6 (Method Call for multiple parameter using object) */
-const PARAM_OBJ = {
+const PARAM_OBJ1 = {
   time: '22:30',
   address: 'Via del Sole, 21',
   mainIndex: 2,
   starterIndex: 2,
 };
 
-RESTAURANT.orderDelivery(PARAM_OBJ);
-RESTAURANT.orderDeliveryDefault(PARAM_OBJ);
+RESTAURANT.orderDelivery(PARAM_OBJ1);
+
+const PARAM_OBJ2 = {
+  address: 'Via del Sole, 21',
+};
+RESTAURANT.orderDeliveryDefault(PARAM_OBJ2);
 
 /** CASE 1 (Multi variables with same names) */
 const { name, openingHours, categories } = RESTAURANT;
