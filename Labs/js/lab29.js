@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * CASE 1
+ * USE CASE 1
  */
 var pName = 'RAM NIWASH';
 
@@ -34,7 +34,7 @@ let pAge = person.getAge();
 console.log('pAge =', pAge);
 
 /**
- * CASE 2
+ * USE CASE 2
  */
 let employee = {
   eName: 'PREM KUMAR',
@@ -56,7 +56,7 @@ let employee = {
 // console.log('eeName = ', eeName);
 
 /**
- * CASE 3
+ * USE CASE 3
  */
 let employee2 = {
   eName: 'PREM KUMAR',
@@ -80,7 +80,7 @@ let eeName2 = employee2.getEName();
 console.log('eeName2 = ', eeName2);
 
 /**
- * CASE 4
+ * USE CASE 4
  */
 let employee3 = {
   eName: 'SUNDEEP KUMAR',
@@ -103,7 +103,7 @@ let eeName3 = employee3.getEName();
 console.log('eeName3 = ', eeName3);
 
 /**
- * CASE 5
+ * USE CASE 5
  *
  * Arguments
  */

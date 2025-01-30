@@ -16,6 +16,14 @@ const RESTAURANT = {
   mainMenu: ['Special', 'Lunch', 'Dinner', 'Breakfast'],
 
   openingHours: {
+    saturday: {
+      open: 9,
+      close: 22,
+    },
+    sunday: {
+      open: 9,
+      close: 22,
+    },
     monday: {
       open: 6,
       close: 22,
@@ -36,16 +44,15 @@ const RESTAURANT = {
       open: 6,
       close: 22,
     },
-    saturday: {
-      open: 9,
-      close: 22,
-    },
-    sunday: {
-      open: 9,
-      close: 22,
-    },
   },
 
+  /**
+   * Order food
+   *
+   * @param {number} starterIndex
+   * @param {number} mainIndex
+   * @returns
+   */
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
@@ -53,7 +60,7 @@ const RESTAURANT = {
   /**
    * orderDelivery with multiple parameters to receive as object
    *
-   * @param {*} param0
+   * @param {object} param0
    */
   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
     console.log('---------- orderDelivery -------------');
@@ -65,7 +72,7 @@ const RESTAURANT = {
   /**
    * orderDeliveryDefault with default parameter value.
    *
-   * @param {*} param0
+   * @param {object} param0
    */
   orderDeliveryDefault: function ({
     starterIndex = 1,
@@ -78,59 +85,47 @@ const RESTAURANT = {
       and ${this.mainMenu[mainIndex]} will be delivered to ${address}
       at ${time}`);
   },
+
+  /**
+   * Order Pasta with differenct three ingredients
+   *
+   * @param {string} ing1
+   * @param {string} ing2
+   * @param {string} ing3
+   */
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}.`
+    );
+  },
 };
 
-/** USE CASE 1 (Multi variables with same names) */
-const { name, openingHours, categories } = RESTAURANT;
+/** USE CASE 1 */
+// SPREAD, because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
+console.log('arr =', arr);
 
-console.log('name =', name);
-console.log('openingHours =', openingHours);
-console.log('categories =', categories);
-
-/** USE CASE 2 (Multi variables with other names) */
-const { name: restroName, openingHours: hours, categories: tags } = RESTAURANT;
-
-console.log('restroName =', restroName);
-console.log('hours =', hours);
-console.log('tags =', tags);
-
-/** USE CASE 3 (Multi variables with default values) */
-const { menu = [], starterMenu: starters = [], myAbc = 100 } = RESTAURANT;
-
-console.log('menu =', menu);
-console.log('starters =', starters);
-console.log('myAbc =', myAbc);
-
-/** USE CASE 4 (Mutating Variables) */
-let a = 111;
-let b = 999;
+// REST, because on LEFT side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log('a =', a);
 console.log('b =', b);
+console.log('others =', others);
 
-const myObj = { a: 23, b: 7, c: 14 };
-({ a, b } = myObj);
-console.log('a =', a);
-console.log('b =', b);
+/**
+ * USE CASE 2
+ *
+ * Note : REST LEFT side SPREAD should be always the last.
+ */
+const [pizza, , risotto, ...otherFoods] = [
+  ...RESTAURANT.mainMenu,
+  ...RESTAURANT.starterMenu,
+];
+console.log('pizza =', pizza);
+console.log('risotto =', risotto);
+console.log('otherFoods =', otherFoods);
 
-/** USE CASE 5 (Nested Objects) */
-const {
-  friday: { open: OP, close: CL },
-} = openingHours;
-
-console.log('OP =', OP);
-console.log('CL =', CL);
-
-/** USE CASE 6 (Method Call for multiple parameter using object) */
-const PARAM_OBJ1 = {
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-};
-
-RESTAURANT.orderDelivery(PARAM_OBJ1);
-
-const PARAM_OBJ2 = {
-  address: 'Via del Sole, 21',
-};
-RESTAURANT.orderDeliveryDefault(PARAM_OBJ2);
+/** USE CASE 3 */
+const { saturday, sunday, ...weekDays } = RESTAURANT.openingHours;
+console.log('saturday =', saturday);
+console.log('sunday =', sunday);
+console.log('weekDays =', weekDays);

@@ -10,21 +10,21 @@ let obj1 = {
 
 console.log('OBJ 1', obj1);
 
-/** Assign OBJ 1 to OBJ 2 */
+/** USE CASE 1 : Assign OBJ 1 to OBJ 2 */
 let obj2 = obj1;
 console.log('OBJ 2', obj2);
 
-/** Change OBJ 2 Values */
+/** USE CASE 2 :  Change OBJ 2 Values */
 obj2.firstName = 'Manish';
 obj2.lastName = 'Kumar';
 console.log('OBJ 1', obj1);
 console.log('OBJ 2', obj2);
 
-/** Create Shello Copy/Cloing */
+/** USE CASE 3 :  Create Shello Copy/Cloing */
 let obj3 = { ...obj1 };
 console.log('OBJ 3', obj3);
 
-/** Change OBJ 3 Values */
+/** USE CASE 4 : Change OBJ 3 Values */
 obj3.firstName = 'Kapil';
 obj3.lastName = 'Dev';
 obj3.age = 43;
@@ -35,7 +35,7 @@ console.log('OBJ 1 -> mobileNumbers', obj1.mobileNumbers);
 console.log('OBJ 2 -> mobileNumbers', obj2.mobileNumbers);
 console.log('OBJ 3 -> mobileNumbers', obj3.mobileNumbers);
 
-/** Create Deep Copy/Cloing */
+/** USE CASE 5 : Create Deep Copy/Cloing */
 let obj4 = structuredClone(obj1);
 obj4.firstName = 'Rohit Kumar';
 obj4.lastName = 'Malhotra';
