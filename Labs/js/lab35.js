@@ -110,3 +110,52 @@ const RESTAURANT = {
     console.log('otherIngredients =', otherIngredients);
   },
 };
+
+/**
+ * Use ANY data type, return ANY data type,
+ *
+ * short-circuiting
+ *
+ * OR Operator
+ */
+console.log("3 || 'Ram'", '=>', 3 || 'Ram');
+console.log("'' || 'Ram'", '=>', '' || 'Ram');
+console.log('true || 0', '=>', true || 0);
+console.log('undefined || null', '=>', undefined || null);
+
+console.log(
+  "undefined || 0 || '' || 'Hello' || 23 || null",
+  '=>',
+  undefined || 0 || '' || 'Hello' || 23 || null
+);
+
+/** USE CASE 1 */
+RESTAURANT.numGuests = 10;
+// RESTAURANT.numGuests = 0;
+const guests1 = RESTAURANT.numGuests ? RESTAURANT.numGuests : 20;
+console.log('guests1 =', guests1);
+
+const guests2 = RESTAURANT.numGuests || 5;
+console.log('guests2 =', guests2);
+
+/**
+ * AND Operator
+ */
+console.log("3 && 'Ram'", '=>', 0 && 'Ram');
+console.log("3 && 'Ram'", '=>', 7 && 'Ram');
+
+console.log(
+  "'Hello' && 23 && null && 'Ram'",
+  '=>',
+  undefined || ('Hello' && 23 && null && 'Ram')
+);
+
+/**
+ * Practical example
+ */
+if (RESTAURANT.orderPizza) {
+  RESTAURANT.orderPizza('mushrooms', 'spinach');
+}
+
+// Above code can be written as following
+RESTAURANT.orderPizza && RESTAURANT.orderPizza('mushrooms', 'spinach');
