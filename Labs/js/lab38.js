@@ -99,32 +99,32 @@ const RESTAURANT = {
   },
 };
 
-const rest1 = {
-  name: 'Capri',
-  numGuests: 20,
-};
+/**
+ * Looping Arrays: The for-of Loop (ES6)
+ *
+ * continue and break can be used
+ */
+const menu = [...RESTAURANT.starterMenu, ...RESTAURANT.mainMenu];
 
-const rest2 = {
-  name: 'La Piazza',
-  owner: 'Sumaan',
-};
+/** USE CASE 1 */
+for (const item of menu) {
+  console.log('item =', item);
+}
 
-// OR assignment operator
-// rest1.numGuests = rest1.numGuests || 10;
-// rest2.numGuests = rest2.numGuests || 10;
-// rest1.numGuests ||= 10;
-// rest2.numGuests ||= 10;
+/** USE CASE 2 */
+for (const item of menu.entries()) {
+  console.log('item =', item);
+}
 
-// nullish assignment operator (null or undefined)
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
+/** USE CASE 3 */
+console.log('item =', ...menu.entries());
 
-// AND assignment operator
-// rest1.owner = rest1.owner && '<ANONYMOUS>';
-// rest2.owner = rest2.owner && '<ANONYMOUS>';
+/** USE CASE 4 */
+for (const item of menu.entries()) {
+  console.log(`${item[0] + 1} : ${item[1]}`);
+}
 
-rest1.owner &&= '<ANONYMOUS>';
-rest2.owner &&= '<ANONYMOUS>';
-
-console.log('rest1 =', rest1);
-console.log('rest2 =', rest2);
+/** USE CASE 4 */
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1} : ${el}`);
+}
