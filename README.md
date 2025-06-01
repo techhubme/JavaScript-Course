@@ -2,7 +2,12 @@
 
 Welcome JavaScript Course
 
-# Nodejs Setup
+## Table of Contents
+
+- [Project Setup](#about)
+- [References](#features)
+
+# Project Setup
 
 ## Update the System package
 
@@ -37,5 +42,10 @@ Welcome JavaScript Course
 ## Uninstall Nodejs
 
     $ sudo apt remove nodejs -y
-    
-#References
+
+# References
+
+- [Offical Tutor](https://jonas.io/)
+- [Offical Git Repo](https://github.com/jonasschmedtmann/complete-javascript-course)
+- [Git Repo](https://github.com/techhubme/JavaScript-Course.git)
+- [Udemy Course](https://www.udemy.com/course/the-complete-javascript-course/)

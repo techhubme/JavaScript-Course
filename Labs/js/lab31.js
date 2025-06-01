@@ -4,12 +4,7 @@
 const RESTAURANT = {
   name: 'Bhartiya_Restro',
   location: 'Near Sagwan Chonk, Sirsa',
-  categories: [
-    'Delhi Khana',
-    'Kerela Special',
-    'Punjabi Roti',
-    'Karnataka Dosa',
-  ],
+  categories: ['Delhi Khana', 'Kerela Special', 'Punjabi Roti', 'Karnataka Dosa'],
   starterMenu: ['Roti', 'Sabji', 'Salad', 'Paratha'],
   mainMenu: ['Special', 'Lunch', 'Dinner', 'Breakfast'],
 
@@ -36,6 +31,7 @@ console.log('starterMenu =', starterMenu, ', mainMenu =', mainMenu);
 
 /** USE CASE 4 */
 const C1 = [22, 33, [44, 55]];
+console.log('C1', C1);
 const [cA, , cB] = C1;
 console.log('cA =', cA, ', cB =', cB);
 const [i, , [j, k]] = C1;
