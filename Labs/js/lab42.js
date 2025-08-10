@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('Example of Set');
+console.log('ℹ️ Set Demo');
 
 let mySet = new Set();
 // let mySet = new Set([1, 2, 3, 3]);  // We can create set like this
@@ -18,7 +18,7 @@ for (let item of mySet) {
 // Or using forEach
 mySet.forEach(value => console.log(value));
 
-console.log('Example of Map');
+console.log('ℹ️ Map Demo');
 
 //let myMap = new Map();
 // OR we can create with default values
@@ -62,6 +62,8 @@ for (let value of capitals.values()) {
 capitals.forEach((capital, country) => {
   console.log(country, ':', capital);
 });
+
+console.log('ℹ️ String Demo');
 
 console.log('String mehtods');
 let str = '  JavaScript is Fun!  ';
