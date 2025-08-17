@@ -1,0 +1,129 @@
+#container {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+.box {
+  padding: 5px 10px;
+  margin: 5px;
+  background: lightblue;
+  border: 1px solid navy;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remove-btn {
+  margin-left: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.myBox {
+  width: 120px;
+  height: 80px;
+  background-color: yellow;
+}
+#myHeading {
+  font-size: 24px;
+  color: black;
+}
+#myInput {
+  padding: 5px;
+  margin-top: 10px;
+}
+html {
+  background-color: rgb(249, 135, 68);
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+.blue {
+  color: blue;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.box {
+  border: 2px solid #333;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  margin: 5px;
+  padding: 6px 12px;
+}
+input,
+textarea {
+  padding: 6px;
+  margin: 5px;
+}
+.highlight {
+  background: yellow;
+}
+div {
+  padding: 30px;
+  border: 2px solid black;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+ul {
+  padding: 20px;
+  border: 2px solid gray;
+  width: 200px;
+}
+li {
+  padding: 5px;
+  cursor: pointer;
+}
+li:hover {
+  background: lightyellow;
+}
+
+/* Tabbed Component */
+.tabs2 {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.tab2 {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  background: #f0f0f0;
+}
+.tab2.active {
+  background: #007bff;
+  color: white;
+}
+.tab2-content {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+.tab2-content.active {
+  display: block;
+}

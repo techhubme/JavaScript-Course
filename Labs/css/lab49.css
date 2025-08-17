@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+/* Style applied when sticky */
+.sticky {
+  background: #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 10px; /* shrink effect */
+}
+
+.content {
+  margin-top: 80px;
+  padding: 20px;
+  height: 2000px; /* just for scrolling */
+}

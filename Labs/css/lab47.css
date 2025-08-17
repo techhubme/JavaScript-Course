@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+.content {
+  margin-top: 70px; /* push content below nav */
+  padding: 20px;
+  height: 2000px; /* just for scroll */
+}

@@ -1,57 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
-    <style>
-      #container {
-        border: 2px solid black;
-        padding: 10px;
-        margin: 10px;
-      }
-      .box {
-        padding: 5px 10px;
-        margin: 5px;
-        background: lightblue;
-        border: 1px solid navy;
-        border-radius: 6px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .remove-btn {
-        margin-left: 10px;
-        background: crimson;
-        color: white;
-        border: none;
-        padding: 3px 6px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .myBox {
-        width: 120px;
-        height: 80px;
-        background-color: yellow;
-      }
-      #myHeading {
-        font-size: 24px;
-        color: black;
-      }
-      #myInput {
-        padding: 5px;
-        margin-top: 10px;
-      }
-      html {
-        background-color: rgb(249, 135, 68);
-      }
-      .highlight {
-        background-color: yellow;
-        font-weight: bold;
-      }
-      .blue {
-        color: blue;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/lab46.css" />
   </head>
 
   <body>
@@ -102,6 +54,147 @@
     <button onclick="removeClass()">Remove Class</button>
     <button onclick="toggleClass()">Toggle Class</button>
     <button onclick="checkClass()">Check Class</button>
+
+    <hr />
+    <h1>Events And Event Handlers</h1>
+
+    <!-- Mouse Events -->
+    <div class="box" id="mouseBox">
+      <h2>Mouse Events</h2>
+      <button id="clickBtn">Click Me</button>
+      <button id="dblClickBtn">Double Click Me</button>
+      <p id="mouseArea" style="border: 1px solid gray; padding: 20px">Hover or Move your mouse here</p>
+    </div>
+
+    <!-- Keyboard Events -->
+    <div class="box">
+      <h2>Keyboard Events</h2>
+      <input type="text" id="keyInput" placeholder="Type something..." />
+      <p id="keyOutput"></p>
+    </div>
+
+    <!-- Form Events -->
+    <div class="box">
+      <h2>Form Events</h2>
+      <form id="myForm">
+        <input type="text" name="username" id="username" placeholder="Enter username" required />
+        <input type="password" name="password" id="password" placeholder="Enter password" required />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      <p id="formOutput"></p>
+    </div>
+
+    <!-- Window/Document Events -->
+    <div class="box">
+      <h2>Window/Document Events</h2>
+      <p>Resize or Scroll the page to trigger events</p>
+      <p id="windowOutput"></p>
+    </div>
+
+    <!-- Clipboard Events -->
+    <div class="box">
+      <h2>Clipboard Events</h2>
+      <textarea id="clipArea" rows="3" cols="30" placeholder="Copy/Paste here"></textarea>
+      <p id="clipOutput"></p>
+    </div>
+
+    <!-- Drag & Drop Events -->
+    <div class="box">
+      <h2>Drag & Drop Events</h2>
+      <div id="dragItem" draggable="true" style="width: 100px; height: 50px; background: lightblue; text-align: center; line-height: 50px">
+        Drag Me
+      </div>
+      <div id="dropZone" style="width: 200px; height: 100px; border: 2px dashed gray; margin-top: 10px; text-align: center; line-height: 100px">
+        Drop Here
+      </div>
+      <p id="dragOutput"></p>
+    </div>
+
+    <!-- Touch Events (for mobile) -->
+    <div class="box" id="touchBox" style="background: #f9f9f9; padding: 20px">
+      <h2>Touch Events (Mobile only)</h2>
+      <p>Touch inside this box on mobile</p>
+      <p id="touchOutput"></p>
+    </div>
+
+    <hr />
+    <h1>Bubbling and Capturing</h1>
+    <div id="outer">
+      Outer Div
+      <div id="inner">
+        Inner Div
+        <button id="btn">Click Me</button>
+      </div>
+    </div>
+
+    <hr />
+    <h1>Event Propagation</h1>
+
+    <div id="outer2">
+      Outer
+      <div id="inner2">
+        Inner
+        <button id="btn2">Click Me</button>
+      </div>
+    </div>
+
+    <hr />
+    <h1>Event Delegation</h1>
+
+    <ul>
+      <li class="menu_item">Item 1</li>
+      <li class="menu_item">Item 2</li>
+      <li class="menu_item">Item 3</li>
+    </ul>
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+
+    <hr />
+    <h1>Scroll Into View</h1>
+    <button class="btn" id="scrollBtn">Go to Section 3</button>
+
+    <div class="section" style="background: lightcoral">Section 1</div>
+    <div class="section" style="background: lightblue">Section 2</div>
+    <div class="section" style="background: lightgreen" id="target">🌟 Section 3 (Target)</div>
+    <div class="section" style="background: lightgoldenrodyellow">Section 4</div>
+
+    <hr />
+    <h1>DOM Traversing</h1>
+
+    <ul id="menu2">
+      <li id="home">Home</li>
+      <li id="about">About</li>
+      <li id="services">Services</li>
+      <li id="contact">Contact</li>
+    </ul>
+
+    <hr />
+    <h1>Tabbed Component</h1>
+
+    <!-- Tabs -->
+    <div class="tabs2">
+      <div class="tab2 active" data-target="home2">Home</div>
+      <div class="tab2" data-target="about2">About</div>
+      <div class="tab2" data-target="contact2">Contact</div>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="home2" class="tab2-content active">Welcome to the Home page!</div>
+    <div id="about2" class="tab2-content">This is the About page.</div>
+    <div id="contact2" class="tab2-content">Contact us at info@example.com</div>
+
+    <hr />
+    <h1>Passing Arguments to Event Handlers</h1>
+
+    <button id="btnX" value="BUTTON X">Button X</button>
+    <button id="btnY">Button Y</button>
+    <button id="btnZ">Button Z</button>
+
     <script src="js/lab46.js"></script>
   </body>
 </html>

@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+
+.navbar a.active {
+  background: #ff9800;
+  border-radius: 5px;
+}
+
+/* Section styles */
+section {
+  height: 100vh; /* full screen sections */
+  padding: 50px;
+}
+
+#home {
+  background: #f4f4f4;
+}
+#about {
+  background: #ddd;
+}
+#services {
+  background: #bbb;
+}
+#contact {
+  background: #999;
+}
