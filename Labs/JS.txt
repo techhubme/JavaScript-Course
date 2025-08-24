@@ -1,0 +1,254 @@
+Immediately Invoked Function Expressions (IIFE)
+Closer (Similar to Backpack)
+Simple Array Method
+ -slice()  	   		// Don't Change the original array , Create a new array
+ -splice() 	   		// Change the original array
+ -reverse()    		// Mutate the orignal array and reverse elements.
+ -concat()	   		// Concate the element of another array in a array.
+ -join()	   		// 
+The new at Methods
+ -at() 		   		// Returns the element at specific position. also works with string object
+Looping over the array
+ -for
+ -forEach()
+Working with Map and Set
+ -forEach()
+Sample App
+Creating Dom Elements
+Data Transfer map, filter, reduce
+ -reduce() method has accumulater
+ -chaining of methods
+ -find()            // Find the element in array
+ -findIndex()       // Return the index of element 
+ -findLast()  		// Start finding the element from last index.
+ -findLastIndex()   // Start finding the element index from last.
+ -some() 		    // 
+ -every()			// 
+ -flat()			// Nesting the level of sub arrays by one or specified level number.
+ -flatMap()			//
+Sorting Array
+ -sort()
+ -custome sort method
+Array Grouping
+ -groupBy()
+Creating and filling array
+ -fill()  			// Fill the array with specific element for specific index to specific.
+ -from()			// 
+ Non-Districtive Alternatives
+ -toReversed()
+ -toSorted()
+ -toSpliced()
+Numbers, Dates, Intl and Times. (Need more attentation)
+ -Number.parseInt()		  // Parse string to number
+ -Number.parseFloat()     //
+ -Number.isNaN()		  //
+ -Number.isFinite()		  //
+ -Number.isInteger()	  //
+ Math
+ -sqrt()
+ -max()
+ -min()
+ -random()
+ -trunc()
+ -floor()
+ -tofixed()
+ math variable
+ -Math.PI
+ Reminder Operator (%)
+ Numeric Separators
+  - 125_345_346_678
+  - 123_987
+  - 15_00
+  - 1_500 
+ BigInt
+ - 20n+10n
+ -new BigInt(3241234124242213421342342341);
+ Creating Dates
+ - new Date('Aug 02 2025 18:05:41');
+ - new Date('December 24,2023');
+ - new Date(2024,13,12,10,44,33);
+ -new Date(145252);
+ -Date.now();
+ Internationalization Date and Time
+ - const option{
+     hour: 'numeric',
+      minute: 'numeric',
+     day:'numeric'
+ }
+ - Intl.DateTimeFormat('hi_IN',option).format(date);
+  Internationalization Numbers
+  const option{
+     style: 'currency',
+      unit: 'celsius',
+     currency:'INR'
+    }
+  - Intl.NumberFormat('hi-IN',option);
+  Timers
+  	- setTimeout();
+ Implementing Countdown
+ 	-setInterval()
+Advanced DOM and Events
+	- Selecting the element(s)
+	    - document.head;    				  															// Select head element (Valid only for head)
+	     - document.body;    				  														// Select body  element (Valid only for body)
+		- document.querySelector('.header');    				   				// Select first header
+		- document.querySelectorAll('.header');                			// Select All headers
+		- document.getElementById('.header');                  			// Select specific header
+		- document.getElementByTagName('.header');              // Select all elements by tag name
+		- document.getElementByClassName('.header');            // Select all elements by tag name
+	- Creating the Element(s)	
+		- document.createElement('element_name');                 
+	     - document.createElement('div');
+	- Add element
+		- header.append(element);
+		- header.prepend(element);
+		- header.before(element);
+		- header.after(element);
+	- Delete Element
+	 	- remove()
+	 	-removeChild(element);
+	Styles, Attributes and Classes
+		- getComputedStyle(element);
+		- document.documentElement.style.setProperty('name','value');
+		- element.alt='AA';
+		- element.src='http://localhost:8080/image/abc.png'
+		- element.setAttribute('name', 'value');
+		- element.getAttribute('src')= 'http://...';
+		Data Attribute
+		- element.dataset.versionNumber
+		- element.classList.add('c',j);
+		- element.classList.remove('c',j);
+		- element.classList.toggle('c');
+		- element.classList.contains('c',j);
+Types of Events and Event Handlers
+	Event is a single genereted by DOM node or element.
+	element.addEventListener('mouseenter' function(event){
+	   alert('Mouse entered');
+	});
+	Bubbling and Capturing (*)
+	Event Propagation in Practice (*)
+		- Add the same event to parent and child nodes.
+	Event Delegation: Implementing Page Navigation
+		- element.scrollIntoView({behavior:'smooth'});
+	DOM Traversing (Walking through the DOM)
+		- element.childNodes;
+		- element.children
+		- element.parentNode;
+		- element.parentElement;
+		- element.closest('.header');
+		- element.previousElementSibling();
+		- element.nextElementSibling();
+		- element.previousSibling();
+		- element.nextSibling();
+	Building a Tabbed Component
+	Passing Arguments to Event Handlers
+	Implementing a Sticky Navigation: The Scroll
+	A Better Way: The Intersection Observer API
+		- const observer = new IntersectionObserer(obsCallback, obsOptions);
+		  observer.observe(section1);
+	Revealing Elements on Scroll
+	Lazy Loading Images
+	Building a Slider Component
+	Lifecycle DOM Object.
+		- DOM Content loader
+		- document.addEventListener('DOMContentLoaded', function (e){});
+		- window.addEventListener('load', function (e){});
+		- window.addEventListener('beforeload', function (e){});
+	Efficient Script Loading: defer and async
+ 
+	OOPS with JavaScript
+	Constructor Function and new Operator
+	Prototype
+		- Person.prototype.isPrototypeOf(object);
+		- Person.prototype.hasOwnProperity(object);
+	 Prototypal Inheritance on Built-In Objects
+
+
+ES6 Classes
+	- Classes are NOT Hoisted.
+	- Classes are first class citizes.
+	- Classes are executed in strict mode.
+Setters and Getters
+	- get latest()
+	- set latest(now);
+Static Methods
+	- Person.hey = function(){
+	     // Code here
+	}
+Object.create(protoname)
+	OBJECT.__proto__
+Inheritance Between "Classes": Constructor Functions (*)
+Inheritance Between "Classes": ES6 Classes
+	- Student extends Person{
+	     constructor(){
+		    // Code goes here
+		 }
+	  }
+Inheritance Between "Classes": Object.create
+Encapsulation: Private Class Fields and Methods
+	#movement // private fields
+	#deposit() // private methods
+  Chaining Methods
+	- acc.deposit(300).withdraw(200).withdraw(50).deposit(500)...;
+	return this in method.
+	Note : If any method is not returning this that method is not Chainable.
+Mapty project
+	- User Stories (Description of the applicatio's functionality from the user's perspective. All user stories put together describe the entire application/)
+	- Features ()
+	- Flow Chart (What will be built)
+	- Architecture (How we will build it)
+	- Development Steps
+	- How to use Geo Location API
+		- navigator.geolocation.getCurrentPosition();
+	- Leaflet Libs (JS and CSS).
+	- Display A map maker.
+	- Rendering Workout input form.
+	- Project Architecture
+	- Refactoring for Project Architecture
+	- Local Storage
+--------------------------------------------------------------------------------------------------------------------------------------
+Asynchronous JavaScript (**)
+	- Asynchronous JavaScript, AJAX and APIs
+	- Our First AJAX Call: XMLHttpRequest
+	- How the Web Works: Requests and Responses
+	- Promises and the Fetch API
+		- fetch(url).then(response=>{}).then(data).catch(err=>{
+		   console.log(err);
+		}){}
+	- Consuming Promises
+		- fetch(url).then(response=>{}).then(data).catch(err=>{
+		   console.log(err);
+		}){}
+	- Handling Rejected Promises
+		- fetch(url).then(response=>{}).then(data).catch(err=>{
+		   console.log(err);
+		})finally(()=>{
+		});
+	- Throwing Errors Manually
+		- throw new Error('some message');
+	- Asynchronous Behind the Scenes: The Event Loop (*)
+	- The Event Loop in Practice
+	- Building a Simple Promise
+	- Promisifying the Geolocation API
+	- Consuming Promises with Async/Await
+	- Error Handling With try...catch
+	- Returning Values from Async Functions
+	- Running Promises in Parallel
+		- Promise.all();
+	- Other Promise Combinators: race, allSettled and any
+		- Promise.race([..,..]);
+		- Promise.race([..,timeout(1),..,timeout(1)]);
+		- Promise.allSettled();
+		- Promise.any() [ES2021]
+An Overview of Modern JavaScript Development (*)
+	- Overview of Module
+		- Import and Export the module.
+	- Top-Level await (ES2022)
+	- The Module Pattern
+	- CommonJS Modules
+	- A Brief Introduction to the Command Line
+	- Review: Writing Clean and Modern JavaScript
+
+
+
+
